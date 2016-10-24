@@ -1,0 +1,21 @@
+---
+- hosts: default
+  sudo: yes
+  vars_files:
+    - my-vars.yml
+  
+  roles:
+    - { role: OULibraries.centos7, tags: ["centos7"] }
+    #- { role: OULibraries.mariadb, tags: ["mariadb"] }
+    #- { role: OULibraries.apache2, tags: ["apache2"] }
+    - { role: OULibraries.gitlab, tags: ["gitlab"] }
+    - { role: OULibraries.users, tags: ["users"] }
+
+  tasks:
+    - name: packages for development and testing
+      yum:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - emacs
+        - net-tools
