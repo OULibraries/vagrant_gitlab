@@ -14,3 +14,7 @@ ssh_brokers:
     ip: '127.0.0.1'
     dn_suffix: 'localdomain'
 
+gitlab_download_url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh
+gitlab_md5sum: fb737d9b1e20185e7cb8988ab8ba89ee
+
+                                                    
