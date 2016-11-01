@@ -6,8 +6,7 @@
   
   roles:
     - { role: OULibraries.centos7, tags: ["centos7"] }
-    #- { role: OULibraries.mariadb, tags: ["mariadb"] }
-    #- { role: OULibraries.apache2, tags: ["apache2"] }
+    - { role: OULibraries.postfix-mta, tags: ["postfix"] }
     - { role: OULibraries.gitlab, tags: ["gitlab"] }
     - { role: OULibraries.users, tags: ["users"] }
 

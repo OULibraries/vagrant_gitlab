@@ -3,6 +3,10 @@
   version: v2016-08-24.0
   name: OULibraries.centos7
 
+- src: https://github.com/OULibraries/ansible-role-postfix-mta
+  version: master
+  name: OULibraries.postfix-mta
+
 - src: https://github.com/OULibraries/ansible-role-gitlab
   version: master
   name: OULibraries.gitlab
