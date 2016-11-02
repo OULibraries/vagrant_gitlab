@@ -12,10 +12,11 @@ yum install -y ansible
 cp /vagrant/hosts /etc/ansible/hosts
 cp /vagrant/ansible.cfg /etc/ansible/ansible.cfg
 cp /vagrant/.vagrant/machines/default/virtualbox/private_key /etc/ansible/private_key
+
 # set complaint-free permissions
 chmod 600 /etc/ansible/private_key
 chmod -x /etc/ansible/hosts
 
 # run ansible
 ansible-galaxy install -r /vagrant/requirements.yml --force
-ansible-playbook --inventory-file=/etc/ansible/hosts --private-key=/etc/ansible/private_key /vagrant/vagrant.yml -vvvv
+ansible-playbook --inventory-file=/etc/ansible/hosts --private-key=/etc/ansible/private_key /vagrant/vagrant.yml 
