@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "geerlingguy/centos7"
   config.vm.network "private_network", ip: "10.255.255.10"
-  config.vm.hostname = "gitlab.vagrant.dev"
+  config.vm.hostname = "gitlab.vagrant.localdomain"
   config.vm.network "forwarded_port", guest:443, host:443 # Apache
   config.vm.network "forwarded_port", guest:80, host:80 # Apache
 
