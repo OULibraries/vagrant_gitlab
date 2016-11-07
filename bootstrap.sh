@@ -19,4 +19,4 @@ chmod -x /etc/ansible/hosts
 
 # run ansible
 ansible-galaxy install -r /vagrant/requirements.yml --force
-ansible-playbook --inventory-file=/etc/ansible/hosts --private-key=/etc/ansible/private_key /vagrant/vagrant.yml 
+ansible-playbook --inventory-file=/etc/ansible/hosts --private-key=/etc/ansible/private_key /vagrant/vagrant.yml -vvv 

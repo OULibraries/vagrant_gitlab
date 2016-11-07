@@ -16,7 +16,7 @@ ssh_brokers:
 
 # Running somebody elses script so we check md5 and fail out if it changes
 gitlab_download_url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh
-gitlab_md5sum: fb737d9b1e20185e7cb8988ab8ba89ee
+gitlab_md5sum: 4cb77144fcb86897e819ce24384c0b55
 
 # Installing the Community Edition (CE)
 gitlab_edition: "gitlab-ce"
