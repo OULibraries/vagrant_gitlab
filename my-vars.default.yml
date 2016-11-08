@@ -22,23 +22,23 @@ gitlab_md5sum: 4cb77144fcb86897e819ce24384c0b55
 gitlab_edition: "gitlab-ce"
 
 # Domain configuration - This gets carried into the external URL and self-signed certificate configs below
-httpd_dn_prefix: 
-httpd_dn_suffix:
+gitlab_dn_prefix: 
+gitlab_dn_suffix:
 
 # URL of GitLabs installation - https is included since we set http to redirect to https below
-gitlab_external_url: "https://{{ httpd_dn_prefix }}.{{ httpd_dn_suffix }}/"
+gitlab_external_url: "https://{{ gitlab_dn_prefix }}.{{ gitlab_dn_suffix }}/"
 
 # We can change where the git repos are stored - must NOT be a symlink
 gitlab_git_data_dir: "/var/opt/gitlab/git-data"
 
 # SSL Configuration
 gitlab_redirect_http_to_https: "true"
-gitlab_ssl_certificate: "/etc/gitlab/ssl/{{ httpd_dn_prefix }}.{{ httpd_dn_suffix }}.crt"
-gitlab_ssl_certificate_key: "/etc/gitlab/ssl/{{ httpd_dn_prefix }}.{{ httpd_dn_suffix }}.key"
+gitlab_ssl_certificate: "/etc/gitlab/ssl/{{ gitlab_dn_prefix }}.{{ gitlab_dn_suffix }}.crt"
+gitlab_ssl_certificate_key: "/etc/gitlab/ssl/{{ gitlab_dn_prefix }}.{{ gitlab_dn_suffix }}.key"
 
 # SSL Self-signed Certificate Configuration
 gitlab_create_self_signed_cert: "true"
-gitlab_self_signed_cert_subj: "/CN={{ httpd_dn_suffix }}"
+gitlab_self_signed_cert_subj: "/CN={{ gitlab_dn_suffix }}"
 
 # LDAP Configuration
 gitlab_ldap_enabled: "false"
